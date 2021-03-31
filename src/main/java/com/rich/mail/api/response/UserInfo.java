@@ -1,4 +1,6 @@
 package com.rich.mail.api.response;
 
-public class UserInfo {
+import java.io.Serializable;
+
+public class UserInfo implements Serializable {
 }
