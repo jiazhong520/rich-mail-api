@@ -16,12 +16,12 @@ public class WebAppConfigurer implements WebMvcConfigurer {
     @Autowired
     private TokenInterceptor tokenInterceptor;
 
-    @Override
-    public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(tokenInterceptor)
-                .addPathPatterns("/**")
-                .excludePathPatterns("/doc.html","/swagger-resources/**", "/webjars/**", "/v2/**");
-    }
+//    @Override
+//    public void addInterceptors(InterceptorRegistry registry) {
+//        registry.addInterceptor(tokenInterceptor)
+//                .addPathPatterns("/**")
+//                .excludePathPatterns("/login","/doc.html","/swagger-resources/**", "/webjars/**", "/v2/**", "/swagger-ui.html/**","/v3/**");
+//    }
 
 
 

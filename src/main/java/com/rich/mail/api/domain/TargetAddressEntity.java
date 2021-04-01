@@ -1,16 +1,17 @@
 package com.rich.mail.api.domain;
 
 import javax.persistence.*;
-import java.sql.Timestamp;
+import java.util.Date;
+
 
 @Entity
 @Table(name = "target_address", schema = "champion", catalog = "")
 public class TargetAddressEntity {
     private Long id;
-    private Timestamp createDate;
+    private Date createDate;
     private String createBy;
     private String lastUpdateBy;
-    private Timestamp lastUpdateDate;
+    private Date lastUpdateDate;
     private Boolean deleteFlag;
     private String userName;
     private String userPhone;
@@ -38,11 +39,11 @@ public class TargetAddressEntity {
 
     @Basic
     @Column(name = "create_date", nullable = true)
-    public Timestamp getCreateDate() {
+    public Date getCreateDate() {
         return createDate;
     }
 
-    public void setCreateDate(Timestamp createDate) {
+    public void setCreateDate(Date createDate) {
         this.createDate = createDate;
     }
 
@@ -68,11 +69,11 @@ public class TargetAddressEntity {
 
     @Basic
     @Column(name = "last_update_date", nullable = true)
-    public Timestamp getLastUpdateDate() {
+    public Date getLastUpdateDate() {
         return lastUpdateDate;
     }
 
-    public void setLastUpdateDate(Timestamp lastUpdateDate) {
+    public void setLastUpdateDate(Date lastUpdateDate) {
         this.lastUpdateDate = lastUpdateDate;
     }
 

@@ -30,8 +30,9 @@ public enum Codes {
     LOGIN_ERROR(23,"异地登陆"),
     SERL(25,"账号封禁"),
     ER_LOGIN(26,"该账号在别处登陆"),
-    NOT_BIND(27,"请下载google authenticator 扫码登登陆"),
 
+    NOT_BIND(27,"请下载google authenticator 扫码登登陆"),
+    USER_NAME_ERROR(28,"用户名以存在"),
     ;
 
 

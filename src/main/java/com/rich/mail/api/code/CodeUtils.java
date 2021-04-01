@@ -64,6 +64,15 @@ public class CodeUtils implements Serializable {
     public static CodeUtils NOT_FOUNT() {
         return SET(Codes.not_data);
     }
+    public static CodeUtils CODE_ERROR() {
+        return SET(Codes.CODE_ERROR);
+    }
+    public static CodeUtils PARAM_ERROR() {
+        return SET(Codes.param_error);
+    }
+    public static CodeUtils USER_NAME_ERROR() {
+        return SET(Codes.USER_NAME_ERROR);
+    }
 
     private static CodeUtils SET(Codes codes) {
         CodeUtils codeUtils = new CodeUtils();

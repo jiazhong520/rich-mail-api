@@ -1,24 +1,37 @@
 package com.rich.mail.api.domain;
 
 import javax.persistence.*;
-import java.sql.Timestamp;
+import java.util.Date;
+
 
 @Entity
 @Table(name = "custom_user", schema = "champion", catalog = "")
 public class CustomUserEntity {
     private Long id;
     private String phone;
-    private Timestamp createDate;
+    private Date createDate;
     private String createBy;
-    private Timestamp lastUpdateDate;
+    private Date lastUpdateDate;
     private String lastUpdateBy;
     private Integer deleteFlag;
     private String userName;
     private String userPass;
     private String iconLink;
     private String bInfo;
+
+    @Basic
+    @Column(name = "code", nullable = true)
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String code) {
+        this.code = code;
+    }
+
     private String payPass;
     private Long parentId;
+    private String code;
 
     @Id
     @GeneratedValue
@@ -47,11 +60,11 @@ public class CustomUserEntity {
 
     @Basic
     @Column(name = "create_date", nullable = true)
-    public Timestamp getCreateDate() {
+    public Date getCreateDate() {
         return createDate;
     }
 
-    public void setCreateDate(Timestamp createDate) {
+    public void setCreateDate(Date createDate) {
         this.createDate = createDate;
     }
 
@@ -67,11 +80,11 @@ public class CustomUserEntity {
 
     @Basic
     @Column(name = "last_update_date", nullable = true)
-    public Timestamp getLastUpdateDate() {
+    public Date getLastUpdateDate() {
         return lastUpdateDate;
     }
 
-    public void setLastUpdateDate(Timestamp lastUpdateDate) {
+    public void setLastUpdateDate(Date lastUpdateDate) {
         this.lastUpdateDate = lastUpdateDate;
     }
 

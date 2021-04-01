@@ -1,4 +1,6 @@
 spring:
+  jackson:
+    default-property-inclusion: non_null
   redis:
     host: 49.233.168.186
     password: Rich123!
@@ -56,3 +58,8 @@ config:
     expire: 3600
     # header 名称
     header: token
+swagger:
+  print-init: true #非必需,默认true
+  enabled: true #非必需,默认true
+  docket:
+    base-package: com.rich.mail.api.controller  #必需
