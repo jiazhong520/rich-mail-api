@@ -11,4 +11,7 @@ public interface UserAddressRepository extends JpaRepository<TargetAddressEntity
     @Query(value = "select  * from target_address where delete_flag =0 and user_id=?1", nativeQuery = true)
     List<TargetAddressEntity> queryUserAllAddress(Long userId);
 
+    @Query(value = "select * from target_address where delete_flag = 0 and id=?1", nativeQuery = true)
+    TargetAddressEntity queryByAddressId(Long id);
+
 }

@@ -12,7 +12,18 @@ public class ServiceAddressEntity {
     private String lastUpdateBy;
     private Timestamp lastUpdateDate;
     private String deleteFlag;
+    @Basic
+    @Column(name = "service_name", nullable = true, length = 255)
+    public String getServiceName() {
+        return serviceName;
+    }
+
+    public void setServiceName(String serviceName) {
+        this.serviceName = serviceName;
+    }
+
     private String serviceAddress;
+    private String serviceName;
 
     @Id
     @GeneratedValue
